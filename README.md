@@ -50,6 +50,7 @@ No se necesita instalación de dependencias adicionales. Simplemente un navegado
 ## Personalización
 
 Puedes modificar fácilmente los siguientes aspectos en el archivo `script.js`:
+
 - **Tamaño del código QR**: Cambia los valores `width` y `height` en la configuración de QRCode.
 - **Colores del QR**: Personaliza los colores usando las opciones `colorDark` y `colorLight`.
 
