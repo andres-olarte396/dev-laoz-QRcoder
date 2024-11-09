@@ -12,11 +12,11 @@
         <div class="input-section">
           <label for="size">Tamaño:</label>
           <select id="size">
-            <option value="100">100x100</option>
-            <option value="200">200x200</option>
-            <option value="300">300x300</option>
-            <option value="400">400x400</option>
-            <option value="500">500x500</option>
+            <option value="100">100px x 100px</option>
+            <option value="200">200px x 200px</option>
+            <option value="300">300px x 300px</option>
+            <option value="400">400px x 400px</option>
+            <option value="500">500px x 500px</option>
           </select>
         </div>
         <div class="input-section">
@@ -28,13 +28,16 @@
               <option value="H">Muy alto</option>
             </select>
           </div>
+
           <div class="input-section">
             <label for="textInput">Texto o URL:</label>
             <textarea
               name="textInput"
               id="textInput"
               placeholder="Introduce una URL o texto"
+              oninput="updateWordCount()"
             ></textarea>
+            <p id="wordCount">Palabras: 0</p>
           </div>
           <div class="input-section">
             <label for="colorForeground">Color de código QR:</label>
@@ -46,7 +49,7 @@
             <input type="color" id="colorBackground" value="#ffffff" />
             <div id="backgroundPreview" class="color-preview"></div>
           </div>
-          <button id="generateBtn">Generar Código QR</button>
+          <button id="generateBtn" onclick="generateQRCode()" >Generar Código QR</button>
           <div id="qrCode"></div>
         </div>
 

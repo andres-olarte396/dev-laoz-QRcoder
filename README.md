@@ -32,12 +32,12 @@ No se necesita instalación de dependencias adicionales. Simplemente un navegado
 ## Estructura del Proyecto
 
 ```txt
-/generador-qr
+/ 📂qr-coder
 │
-├── index.html       # Archivo principal con la estructura HTML.
-├── styles.css       # Archivo de estilos CSS para darle diseño a la página.
-├── script.js        # Lógica JavaScript para generar el código QR.
-└── README.md        # Documentación del proyecto.
+├── 📃index.html       # Archivo principal con la estructura HTML.
+├── 📃styles.css       # Archivo de estilos CSS para darle diseño a la página.
+├── 📃script.js        # Lógica JavaScript para generar el código QR.
+└── 📄README.md        # Documentación del proyecto.
 ```
 
 ## Tecnologías Utilizadas
