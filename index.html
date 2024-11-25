@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generador de Código QR</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../dev-laoz-WaveArtCSS/src/theme.css" />
+    <link rel="stylesheet" href="../dev-laoz-WaveArtCSS/src/base.css" />
+    <link rel="stylesheet" href="../dev-laoz-WaveArtCSS/src/components.css" />
   </head>
   <body>
-    <div class="container">
-        <h1>Generador de Código QR</h1>
+    <header>
+      <h1>Generador de Código QR</h1>
+      <p>
+        Un generador de códigos QR simple y rápido, construido con HTML, CSS y
+        JavaScript. Permite generar códigos QR a partir de una URL o texto
+        ingresado por el usuario.
+      </p>
+    </header>
+    <main>
+      <div class="container">
         <div class="input-section">
           <label for="size">Tamaño:</label>
           <select id="size">
@@ -20,39 +31,44 @@
           </select>
         </div>
         <div class="input-section">
-            <label for="correctionLevel">Nivel de corrección:</label>
-            <select id="correctionLevel">
-              <option value="L">Bajo</option>
-              <option value="M">Medio</option>
-              <option value="Q">Alto</option>
-              <option value="H">Muy alto</option>
-            </select>
-          </div>
-
-          <div class="input-section">
-            <label for="textInput">Texto o URL:</label>
-            <textarea
-              name="textInput"
-              id="textInput"
-              placeholder="Introduce una URL o texto"
-              oninput="updateWordCount()"
-            ></textarea>
-            <p id="wordCount">Palabras: 0</p>
-          </div>
-          <div class="input-section">
-            <label for="colorForeground">Color de código QR:</label>
-            <input type="color" id="colorForeground" value="#000000" />
-            <div id="foregroundPreview" class="color-preview"></div>
-          </div>
-          <div class="input-section">
-            <label for="colorBackground">Color de fondo:</label>
-            <input type="color" id="colorBackground" value="#ffffff" />
-            <div id="backgroundPreview" class="color-preview"></div>
-          </div>
-          <button id="generateBtn" onclick="generateQRCode()" >Generar Código QR</button>
-          <div id="qrCode"></div>
+          <label for="correctionLevel">Nivel de corrección:</label>
+          <select id="correctionLevel">
+            <option value="L">Bajo</option>
+            <option value="M">Medio</option>
+            <option value="Q">Alto</option>
+            <option value="H">Muy alto</option>
+          </select>
         </div>
 
+        <div class="input-section">
+          <label for="textInput">Texto o URL:</label>
+          <textarea
+            name="textInput"
+            id="textInput"
+            placeholder="Introduce una URL o texto"
+            oninput="updateWordCount()"
+          ></textarea>
+          <p id="wordCount">Palabras: 0</p>
+        </div>
+        <div class="input-section">
+          <label for="colorForeground">Color de código QR:</label>
+          <input type="color" id="colorForeground" value="#000000" />
+          <div id="foregroundPreview" class="color-preview"></div>
+        </div>
+        <div class="input-section">
+          <label for="colorBackground">Color de fondo:</label>
+          <input type="color" id="colorBackground" value="#ffffff" />
+          <div id="backgroundPreview" class="color-preview"></div>
+        </div>
+        <button id="generateBtn" onclick="generateQRCode()">
+          Generar Código QR
+        </button>
+        <div id="qrCode"></div>
+      </div>
+    </main>
+    <footer>
+      <p>© 2024 Mi Negocio. Todos los derechos reservados.</p>
+    </footer>
     <!-- QRCode.js desde un CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
