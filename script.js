@@ -37,6 +37,18 @@ function updateWordCount() {
   ).textContent = `Palabras: ${wordCount}, Caracteres: ${textInput.length} (Máximo: ${maxCapacity} caracteres)`;
 }
 
+function downloadQRCode(){
+  const qrCode = document.getElementById("qrCode").querySelector("canvas");
+  if (!qrCode) {
+    alert("Primero genera un código QR antes de descargarlo.");
+    return;
+  }
+  const link = document.createElement("a");
+  link.download = "codigo-qr.png";
+  link.href = qrCode.toDataURL("image/png");
+  link.click();
+}
+
 function generateQRCode() {
   const text = document.getElementById("textInput").value;
 
