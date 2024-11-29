@@ -1,22 +1,35 @@
 #qrCode {
-    width: 90%;
+    width: 100%;
     min-height: fit-content;
     border-radius: 8px;
     margin-top: 20px;
-    background-color: white;
-    border: #f4f4f4 20px solid;
+    /* Centrado de contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #qrCode img {
-    width: 100%;
+    width: 300px;
     border-radius: 8px;
 }
 
-.color-preview {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    margin-left: 8px;
-    vertical-align: middle;
-  }
+input[type=color] {
+    width: 98%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    
+    /* Hace que el selector muestre el color seleccionado */
+    background-color: transparent;
+    -webkit-appearance: none; /* Elimina el estilo por defecto en navegadores WebKit */
+    appearance: none;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type=color]::-webkit-color-swatch {
+    border: none;
+}

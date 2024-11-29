@@ -6,23 +6,6 @@ const versionCapacity = {
   H: [17, 34, 58, 82, 106], // Versión 1-5 con corrección H (Muy alto)
 };
 
-function updateColorPreview(inputId, previewId) {
-  document.getElementById(previewId).style.backgroundColor =
-    document.getElementById(inputId).value;
-}
-
-document.getElementById("colorForeground").addEventListener("input", () => {
-  updateColorPreview("colorForeground", "foregroundPreview");
-});
-
-document.getElementById("colorBackground").addEventListener("input", () => {
-  updateColorPreview("colorBackground", "backgroundPreview");
-});
-
-// Actualizar vistas previas al cargar la página
-updateColorPreview("colorForeground", "foregroundPreview");
-updateColorPreview("colorBackground", "backgroundPreview");
-
 function updateWordCount() {
   const textInput = document.getElementById("textInput").value;
   const wordCount = textInput.trim() ? textInput.trim().split(/\s+/).length : 0;
