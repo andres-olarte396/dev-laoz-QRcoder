@@ -14,22 +14,3 @@
     border-radius: 8px;
 }
 
-input[type=color] {
-    width: 98%;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    
-    /* Hace que el selector muestre el color seleccionado */
-    background-color: transparent;
-    -webkit-appearance: none; /* Elimina el estilo por defecto en navegadores WebKit */
-    appearance: none;
-}
-
-input[type=color]::-webkit-color-swatch-wrapper {
-    padding: 0;
-}
-
-input[type=color]::-webkit-color-swatch {
-    border: none;
-}
